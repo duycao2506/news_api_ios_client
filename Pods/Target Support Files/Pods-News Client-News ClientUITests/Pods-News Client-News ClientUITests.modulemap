@@ -1,0 +1,6 @@
+framework module Pods_News_Client_News_ClientUITests {
+  umbrella header "Pods-News Client-News ClientUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
