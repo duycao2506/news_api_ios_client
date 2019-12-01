@@ -10,6 +10,7 @@ target 'News Client' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
+  pod 'FontAwesomeKit'
   
   target 'News ClientTests' do
     inherit! :search_paths
