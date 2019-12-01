@@ -7,6 +7,10 @@ target 'News Client' do
 
   # Pods for News Client
 
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
+  
   target 'News ClientTests' do
     inherit! :search_paths
     # Pods for testing
