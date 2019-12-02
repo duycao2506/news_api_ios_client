@@ -8,8 +8,15 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UITableViewController {
 
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
+    @IBOutlet weak var mainButton: UIButton!
+    
+    var viewModel : ProfileViewModelProtocol = ProfileViewModel.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

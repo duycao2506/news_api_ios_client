@@ -24,27 +24,37 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.1):
     - FontAwesomeKit/Core
+  - IQKeyboardManagerSwift (6.5.4)
   - ObjectMapper (3.5.1)
+  - SDWebImage (5.3.2):
+    - SDWebImage/Core (= 5.3.2)
+  - SDWebImage/Core (5.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
   - FontAwesomeKit
+  - IQKeyboardManagerSwift
   - ObjectMapper
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireObjectMapper
     - FontAwesomeKit
+    - IQKeyboardManagerSwift
     - ObjectMapper
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   FontAwesomeKit: 3614979b3dbb0ec3f7fac1bd760b91f66c31db67
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SDWebImage: 6ac2eb96571bff96ecde31a987172c5934a0eb7d
 
-PODFILE CHECKSUM: bb2c19a9bb32e7a58c795b71b4fa03aaaaf68e6e
+PODFILE CHECKSUM: 8c8f7e89ff88cfdbe56faf9cc928b9a0743be779
 
 COCOAPODS: 1.8.4

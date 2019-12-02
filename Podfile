@@ -11,6 +11,8 @@ target 'News Client' do
   pod 'ObjectMapper'
   pod 'AlamofireObjectMapper'
   pod 'FontAwesomeKit'
+  pod 'IQKeyboardManagerSwift'
+  pod 'SDWebImage'
   
   target 'News ClientTests' do
     inherit! :search_paths
