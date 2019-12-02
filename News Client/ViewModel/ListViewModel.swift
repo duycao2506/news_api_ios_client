@@ -14,6 +14,8 @@ protocol ListViewModelProtocol {
     var loading : Bindable<Bool> {get set}
     var error : Bindable<Error?> {get set}
     
+    func itemAt(index : Int) -> ListItemViewModelProtocol
+    func itemCount() -> Int
     func loadMore()
     func reload()
 }

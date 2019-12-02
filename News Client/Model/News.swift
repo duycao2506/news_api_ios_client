@@ -18,7 +18,7 @@ class News: NSObject,Mappable {
     var title : String = ""
     var url : String = ""
     var urlToImage:  String = ""
-    var publishedAt : Date? = nil
+    var publishedAt : Date = Date()
     var content : String = ""
     
     required init?(map: Map) {
@@ -34,7 +34,7 @@ class News: NSObject,Mappable {
             newsDescription <- map["description"]
             url <- map["url"]
             urlToImage <- map["urlToImage"]
-            publishedAt <- map["publishedAt"]
+            publishedAt <- (map["publishedAt"],DateFormatTransform.init(dateFormat: "yyyy-MM-dd'T'HH:mm:ss'Z'"))
             content <- map["content"]
         }else {
             
@@ -46,13 +46,7 @@ class News: NSObject,Mappable {
 }
 
 
-class NewsApiData :  ApiData, Pageable, Mappable {
-    
-    
-    var size: Int = 20
-    var page: Int = 1
-    var total: Int = 0
-    var isEnd: Bool = false
+class NewsApiData :  ApiData, Mappable {
     var data : [News] = []
     
     required init(endPoint : Endpoint = .topHeadline) {
@@ -71,11 +65,6 @@ class NewsApiData :  ApiData, Pageable, Mappable {
         }else {
             
         }
-    }
-    
-    func reset() {
-        self.page = 1
-        self.isEnd = false
     }
     
     

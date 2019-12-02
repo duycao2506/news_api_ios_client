@@ -13,11 +13,11 @@ import AlamofireObjectMapper
 
 
 protocol NewsRepoProtocol : class {
-    func getList(requestData: Pageable&ApiRequestProtocol, success: @escaping (([News])->Void), failure : @escaping ((Error)->Void))
+    func getList(requestData: ApiData, success: @escaping (([News])->Void), failure : @escaping ((Error)->Void))
 }
 
 class NewsRepo: NSObject, NewsRepoProtocol {
-    func getList(requestData: ApiRequestProtocol & Pageable, success: @escaping (([News]) -> Void), failure: @escaping ((Error) -> Void)) {
+    func getList(requestData: ApiData, success: @escaping (([News]) -> Void), failure: @escaping ((Error) -> Void)) {
         Alamofire.request(requestData.buildGetRequest()).responseObject { [weak requestData] (response : DataResponse<NewsApiData>) in
             if let err = response.error {
                 failure(err)

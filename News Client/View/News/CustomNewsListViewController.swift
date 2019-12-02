@@ -16,6 +16,9 @@ class CustomNewsListViewController: NewsListViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func configure(withViewmodel viewModel: NewsListViewModelProtocol) {
+        super.configure(withViewmodel: CustomNewsListViewModel.init())
+    }
 
     /*
     // MARK: - Navigation

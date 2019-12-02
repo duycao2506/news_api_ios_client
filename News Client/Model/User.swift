@@ -8,16 +8,16 @@
 
 import Foundation
 
-class User {
+class User : NSObject {
     static let invalidPassword : Error = NSError.init(domain: "", code: 2, userInfo: [NSLocalizedDescriptionKey : "Invalid password"])
     var username : String = ""
     var password : String = ""
     
     init(username : String, password : String) throws {
+        super.init()
         self.username = username
         guard let password = password.data(using: .utf8)?.base64EncodedString() else {
             throw User.invalidPassword
-            return
         }
         self.password = password
     }

@@ -1,14 +1,14 @@
 //
-//  TopHeadlinesViewController.swift
+//  MyTabBarViewController.swift
 //  News Client
 //
-//  Created by Duy Cao on 12/2/19.
+//  Created by Duy Cao on 12/3/19.
 //  Copyright © 2019 Duy Cao. All rights reserved.
 //
 
 import UIKit
 
-class TopHeadlinesViewController: NewsListViewController {
+class MyTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +16,6 @@ class TopHeadlinesViewController: NewsListViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    override func configure(withViewmodel viewModel: NewsListViewModelProtocol) {
-        super.configure(withViewmodel: HeadlinesNewsListViewModel.init())
-    }
 
     /*
     // MARK: - Navigation

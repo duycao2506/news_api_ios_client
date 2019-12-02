@@ -12,6 +12,7 @@
 		8421DC1F2395666200A4A699 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421DC1E2395666200A4A699 /* ProfileViewModel.swift */; };
 		8421DC212395679000A4A699 /* UserPreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421DC202395679000A4A699 /* UserPreferenceManager.swift */; };
 		8421DC23239567D800A4A699 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421DC22239567D800A4A699 /* User.swift */; };
+		8421DC2523956F4E00A4A699 /* ObjectMapperTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8421DC2423956F4E00A4A699 /* ObjectMapperTransformer.swift */; };
 		8483C9392391917800F2E80A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C9382391917800F2E80A /* AppDelegate.swift */; };
 		8483C93B2391917800F2E80A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C93A2391917800F2E80A /* SceneDelegate.swift */; };
 		8483C9402391917800F2E80A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8483C93E2391917800F2E80A /* Main.storyboard */; };
@@ -40,6 +41,8 @@
 		8483C99E23955AF500F2E80A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C99D23955AF500F2E80A /* UIViewController+Extension.swift */; };
 		8483C9A023955C2800F2E80A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8483C99F23955C2800F2E80A /* Login.storyboard */; };
 		8483C9A323955F5F00F2E80A /* UserSignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8483C9A223955F5F00F2E80A /* UserSignViewController.swift */; };
+		84E33E3423958AC2005F446E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E33E3323958AC2005F446E /* String+Extension.swift */; };
+		84E33E362395A068005F446E /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E33E352395A068005F446E /* MyTabBarViewController.swift */; };
 		88D348875F019621F1F77730 /* Pods_News_Client_News_ClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06DFCD132842292966914C3D /* Pods_News_Client_News_ClientUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +72,7 @@
 		8421DC1E2395666200A4A699 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		8421DC202395679000A4A699 /* UserPreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceManager.swift; sourceTree = "<group>"; };
 		8421DC22239567D800A4A699 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8421DC2423956F4E00A4A699 /* ObjectMapperTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectMapperTransformer.swift; sourceTree = "<group>"; };
 		8483C9352391917800F2E80A /* News Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8483C9382391917800F2E80A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8483C93A2391917800F2E80A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 		8483C99D23955AF500F2E80A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8483C99F23955C2800F2E80A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8483C9A223955F5F00F2E80A /* UserSignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSignViewController.swift; sourceTree = "<group>"; };
+		84E33E3323958AC2005F446E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		84E33E352395A068005F446E /* MyTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
 		8AF79E21FEB1B99329FA5ACE /* Pods-News Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Client.release.xcconfig"; path = "Target Support Files/Pods-News Client/Pods-News Client.release.xcconfig"; sourceTree = "<group>"; };
 		BA5EC87C690E01A1E8363ED0 /* Pods-News Client-News ClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News Client-News ClientUITests.release.xcconfig"; path = "Target Support Files/Pods-News Client-News ClientUITests/Pods-News Client-News ClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D8BD4D9F2E82B885FB02823D /* Pods_News_Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_Client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,8 +230,8 @@
 			children = (
 				8483C9A423955F6700F2E80A /* News */,
 				8483C9A123955F1300F2E80A /* User */,
-				8483C9702394180D00F2E80A /* Cells */,
 				8483C93E2391917800F2E80A /* Main.storyboard */,
+				84E33E352395A068005F446E /* MyTabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,10 +239,9 @@
 		8483C9692391940B00F2E80A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				84A2737F239579B30080516D /* News */,
 				8483C986239432BE00F2E80A /* Bindable.swift */,
 				8483C982239430AC00F2E80A /* ListViewModel.swift */,
-				8483C99823943DEB00F2E80A /* NewsListViewModel.swift */,
-				8483C99A23943E2200F2E80A /* NewsListItemViewModel.swift */,
 				8421DC1E2395666200A4A699 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
@@ -275,6 +280,8 @@
 				8483C97823941A3400F2E80A /* ProjectSetting.swift */,
 				8483C99D23955AF500F2E80A /* UIViewController+Extension.swift */,
 				8421DC202395679000A4A699 /* UserPreferenceManager.swift */,
+				8421DC2423956F4E00A4A699 /* ObjectMapperTransformer.swift */,
+				84E33E3323958AC2005F446E /* String+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -292,11 +299,21 @@
 		8483C9A423955F6700F2E80A /* News */ = {
 			isa = PBXGroup;
 			children = (
+				8483C9702394180D00F2E80A /* Cells */,
 				8483C9802394308D00F2E80A /* NewsListViewController.swift */,
 				8483C99423943D9200F2E80A /* NewsDetailViewController.swift */,
 				8483C99523943D9200F2E80A /* NewsDetailViewController.xib */,
 				8483C98E23943C9E00F2E80A /* TopHeadlinesViewController.swift */,
 				8483C99023943CB400F2E80A /* CustomNewsListViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		84A2737F239579B30080516D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8483C99823943DEB00F2E80A /* NewsListViewModel.swift */,
+				8483C99A23943E2200F2E80A /* NewsListItemViewModel.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -543,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E33E362395A068005F446E /* MyTabBarViewController.swift in Sources */,
 				8483C99E23955AF500F2E80A /* UIViewController+Extension.swift in Sources */,
 				8421DC1F2395666200A4A699 /* ProfileViewModel.swift in Sources */,
 				8483C99123943CB400F2E80A /* CustomNewsListViewController.swift in Sources */,
@@ -555,7 +573,9 @@
 				8483C99923943DEB00F2E80A /* NewsListViewModel.swift in Sources */,
 				8483C9A323955F5F00F2E80A /* UserSignViewController.swift in Sources */,
 				8483C9812394308D00F2E80A /* NewsListViewController.swift in Sources */,
+				84E33E3423958AC2005F446E /* String+Extension.swift in Sources */,
 				8483C98F23943C9E00F2E80A /* TopHeadlinesViewController.swift in Sources */,
+				8421DC2523956F4E00A4A699 /* ObjectMapperTransformer.swift in Sources */,
 				8483C99623943D9200F2E80A /* NewsDetailViewController.swift in Sources */,
 				8483C9392391917800F2E80A /* AppDelegate.swift in Sources */,
 				8421DC212395679000A4A699 /* UserPreferenceManager.swift in Sources */,

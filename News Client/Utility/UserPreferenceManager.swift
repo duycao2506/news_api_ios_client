@@ -17,16 +17,26 @@ class UserPreferenceManager : NSObject {
         
     }
     
-    func registerUser(user : User){
-        UserDefaults.standard.setValue(user, forKey: user.username)
-        self.user = user
+    func insertOrUpdate(userNew : User){
+        if let user = self.user {
+            UserDefaults.standard.removeObject(forKey: user.username)
+        }
+        UserDefaults.standard.setValue(userNew.password, forKey: userNew.username)
+        self.user = userNew
     }
     
     func login(username : String, password : String) -> User? {
-        guard let userRaw = UserDefaults.standard.value(forKey: username) as? User, userRaw.password == password else {
+        guard let encodedPassword = password.data(using: .utf8)?.base64EncodedString() else {return nil}
+        guard let userRaw = UserDefaults.standard.value(forKey: username) as? String, userRaw == encodedPassword else {
             return nil
         }
-        self.user = userRaw
+        do {
+            let user = try User.init(username: username, password: password)
+            self.user = user
+        }catch _ {
+            return nil
+        }
+        
         return self.user
     }
 }

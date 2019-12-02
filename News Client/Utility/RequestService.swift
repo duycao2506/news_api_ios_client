@@ -35,15 +35,23 @@ protocol Pageable : class {
 }
 
 protocol ApiRequestProtocol : class {
-    var query: Query {get set}
+    var query: Query? {get set}
     var lang : Language {get set}
     var endPoint : Endpoint {get set}
     
     func buildGetRequest() -> String
 }
 
-class ApiData : NSObject, ApiRequestProtocol {
-    var query: Query = .newsBitcoin
+class ApiData : NSObject, ApiRequestProtocol, Pageable {
+    var size: Int = 0
+    
+    var page: Int = 1
+    
+    var total: Int = 0
+    
+    var isEnd: Bool = false
+    
+    var query: Query? = nil
     
     var lang: Language = .english
     
@@ -53,7 +61,15 @@ class ApiData : NSObject, ApiRequestProtocol {
          return RequestBuilder
             .init(endPoint: self.endPoint)
             .withQuery(query: query)
-            .withLanguage(lang: lang).build()
+            .withLanguage(lang: lang)
+            .withPage(page: self.page)
+            .build()
+        
+    }
+    
+    func reset() {
+        isEnd = false
+        page = 1
     }
     
 
@@ -79,7 +95,13 @@ class RequestBuilder : NSObject {
         return self
     }
     
-    func withQuery(query : Query) -> RequestBuilder {
+    func withPage (page : Int) ->RequestBuilder {
+        self.url.append("&page=\(page)")
+        return self
+    }
+    
+    func withQuery(query : Query?) -> RequestBuilder {
+        guard let query = query else {return self}
         self.url.append("&q=\(query.rawValue)")
         return self
     }
