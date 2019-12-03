@@ -5,5 +5,5 @@
 - Run pod install
 ## Change API Key
 - Go to Project file, target News Client -> Build Settings -> Change the string of key API_SECRET_KEY
-![instruction](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![instruction](https://github.com/duycao2506/news_api_ios_client/blob/master/api_key.png)
 
