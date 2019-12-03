@@ -766,7 +766,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A6A0A5DF152E78E3E8ECDC7 /* Pods-News Client.debug.xcconfig */;
 			buildSettings = {
-				API_SECRET_KEY = ef58a038a7b1416189cc3a4047c112ff;
+				API_SECRET_KEY = 7688e799dc124e7e84e4513378492ff4;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVUH4TQN58;
@@ -786,7 +786,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8AF79E21FEB1B99329FA5ACE /* Pods-News Client.release.xcconfig */;
 			buildSettings = {
-				API_SECRET_KEY = ef58a038a7b1416189cc3a4047c112ff;
+				API_SECRET_KEY = 7688e799dc124e7e84e4513378492ff4;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GVUH4TQN58;
