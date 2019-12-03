@@ -74,10 +74,23 @@ class HeadlinesNewsListViewModel : NewsListViewModel {
     }
 }
 
-class CustomNewsListViewModel : NewsListViewModel {
+protocol CustomNewsListViewModelProtocol : class {
+    var newsQuery : Bindable<Query> {get set}
+    
+    func updateNewsQuery (query : Query)
+}
+
+class CustomNewsListViewModel : NewsListViewModel, CustomNewsListViewModelProtocol {
     var newsQuery : Bindable<Query> = .init(.newsBitcoin)
+    
     override init(repo: NewsRepoProtocol = NewsRepo.init()) {
         super.init(repo: repo)
         self.apiData.query = newsQuery.value
     }
+    
+    func updateNewsQuery(query: Query) {
+        self.apiData.query = query
+        self.newsQuery.value = query
+    }
+    
 }

@@ -68,7 +68,7 @@ class ProfileViewController: UITableViewController {
                .compactMap({$0})
                .first?.windows
                .filter({$0.isKeyWindow}).first else {return}
-        guard let loginViewController = self.getViewControllerFromStoryBoard(type: UserSignViewController.self, storyBoard: .LOGIN) else {return}
+        guard let loginViewController = UIViewController.getViewControllerFromStoryBoard(type: UserSignViewController.self, storyBoard: .LOGIN) else {return}
         let nav = UINavigationController.init(rootViewController: loginViewController)
         window.rootViewController = nav
         self.tabBarController?.dismiss(animated: true, completion: nil)

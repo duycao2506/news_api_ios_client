@@ -46,7 +46,7 @@ class UserSignViewController: ProfileViewController {
                .compactMap({$0})
                .first?.windows
                .filter({$0.isKeyWindow}).first else {return}
-        guard let tabBarVc = self.getViewControllerFromStoryBoard(type: MyTabBarViewController.self, storyBoard: .MAIN) else {return}
+        guard let tabBarVc = UIViewController.getViewControllerFromStoryBoard(type: MyTabBarViewController.self, storyBoard: .MAIN) else {return}
         window.rootViewController = tabBarVc
         self.dismiss(animated: true, completion: nil)
     }

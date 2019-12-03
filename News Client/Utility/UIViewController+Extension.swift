@@ -11,10 +11,11 @@ import UIKit
 public enum Storyboard: String {
     case MAIN = "Main"
     case LOGIN = "Login"
+    case NEWS_DETAIL = "NewsDetail"
 }
 
 extension UIViewController {
-    func getViewControllerFromStoryBoard<T: UIViewController>(type: T.Type, storyBoard: Storyboard) -> T? {
+    static func getViewControllerFromStoryBoard<T: UIViewController>(type: T.Type, storyBoard: Storyboard) -> T? {
         var fullName: String = NSStringFromClass(T.self)
         let storyboard = UIStoryboard(name: storyBoard.rawValue, bundle: nil)
         if let range = fullName.range(of:".", options:.backwards, range:nil, locale: nil){

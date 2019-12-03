@@ -12,7 +12,7 @@ class NewsListViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBOutlet weak var tableView : UITableView!
-    var viewModel : NewsListViewModelProtocol! = NewsListViewModel.init()
+    private var viewModel : NewsListViewModelProtocol! = NewsListViewModel.init()
     weak var pullControl : UIRefreshControl!
     
     override func viewDidLoad() {
@@ -113,4 +113,9 @@ class NewsListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let news = self.viewModel.itemAt(index: indexPath.row).rawValue as? News else {return}
+        guard let detailVc = NewsDetailViewController.getViewController(withViewmodel: NewsDetailViewModel.init(news: news)) else {return}
+        self.navigationController?.pushViewController(detailVc, animated: true)
+    }
 }

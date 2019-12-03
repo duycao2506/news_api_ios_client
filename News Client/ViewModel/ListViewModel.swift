@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ListViewModelProtocol {
+    
     var itemList : Bindable<[ListItemViewModelProtocol]> {get set}
     var apiData : ApiData {get set}
     var loading : Bindable<Bool> {get set}
@@ -20,5 +21,7 @@ protocol ListViewModelProtocol {
     func reload()
 }
 
-protocol ListItemViewModelProtocol : class {}
+protocol ListItemViewModelProtocol : class {
+    var rawValue : Any? {get set}
+}
 

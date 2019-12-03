@@ -17,6 +17,8 @@ protocol NewsListItemViewModelProtocol : ListItemViewModelProtocol {
 }
 
 class NewsListItemViewModel : NewsListItemViewModelProtocol {
+    var rawValue: Any? = nil
+    
     var dateformatter: DateFormatter = .init(withFormat: "dd-MM-yyyy HH:mm:ss", locale: Locale.current.identifier)
     
     var imageUrl: String = ""
@@ -30,6 +32,7 @@ class NewsListItemViewModel : NewsListItemViewModelProtocol {
     var date: String = ""
     
     required init(news : News) {
+        self.rawValue  = news
         self.imageUrl = news.urlToImage
         self.title = news.title
         self.newsDescription = news.newsDescription

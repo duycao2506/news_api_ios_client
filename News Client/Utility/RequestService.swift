@@ -13,7 +13,7 @@ enum Language : String {
     case english = "en"
 }
 
-enum Query : String {
+enum Query : String, CaseIterable {
     case newsBitcoin = "bitcoin"
     case newsApple = "apple"
     case newsEarthquake = "earthquake"
